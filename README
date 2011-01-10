@@ -1,0 +1,12 @@
+A work in progress...
+
+Usage:
+
+  ./text2stl.sh 'Hello World'
+
+Requires:
+
+  * ImageMagick
+  * autotrace
+  * pstoedit
+  * OpenSCAD
