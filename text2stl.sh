@@ -1,8 +1,9 @@
 #!/bin/sh
 
-convert -size 400x400 -background transparent -fill black -stroke black -gravity center -kerning -30 -font Helvetica-Bold caption:"$1" tmp.png
+# To get a list of available fonts use this command: identify -list font
+convert -size 360x360 -bordercolor transparent -border 20x20 -background transparent -fill black -gravity center -font Helvetica-Bold label:"$1" tmp.png
 
-autotrace --output-file=tmp.eps tmp.png
+autotrace -output-file=tmp.eps tmp.png
 
 pstoedit -dt -f dxf:-polyaslines tmp.eps tmp.dxf
 
